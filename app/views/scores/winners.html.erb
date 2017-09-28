@@ -1,0 +1,17 @@
+<% if Vote.count == 2 %>
+
+<% FoodCategory.all.each do |cat| %>
+	<h1><%= cat.name %> Winner</h1>
+	<h3>Recipe Name:</h3> 
+	<p><%= cat.winner.name %></p>
+	<h3>Chef Name:</h3> 
+	<p><%= cat.winner.chef.name %></p>
+	<h3>Team Name:</h3> 
+	<p><%= cat.winner.chef.company %></p>
+	<br/>
+	<br/>
+<% end %>
+
+<% else %>
+	<h2>Votes are still being counted!</h2>
+<% end %>

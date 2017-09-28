@@ -1,0 +1,37 @@
+<p>---------------------------------------------------------------------------</p>
+
+		<h2><%= food.name %></h2>
+
+		<h3><%= food.chef.name %></h3>
+
+		<p><%= food.description %></p>
+		
+		<!--NEEDS HIDDEN FIELD FOR JUDGE ID AND FOOD ID!!!!-->
+		<div class="scoring_form">
+			<p id="scores_header">SUBMIT SCORES:</p>
+			<%= form_for @vote, url: {action: "create"}, html: {class: "nifty_form"} do |f| %>
+				<%= hidden_field_tag(:judge_id, judge.id) %>
+				<%= hidden_field_tag(:food_item_id, food.id) %>
+				<%= label_tag(:creativity_score, 'Creativity') %>
+				<br/>
+				<%= f.number_field :creativity_score, max: 10 %>
+				<br/>
+				<br/>
+				<%= label_tag(:presenation_score, 'Presentation') %>	
+				<br/>			
+				<%= f.number_field :presentation_score, max: 10 %>
+				<br/>
+				<br/>
+				<%= label_tag(:category_alignment_score, 'Category Alignment') %>	
+				<br/>
+				<%= f.number_field :category_alignment_score, max: 10 %>
+				<br/>
+				<br/>
+				<%= label_tag(:overall_taste_score, 'Overall Taste') %>	
+				<br/>
+				<%= f.number_field :overall_taste_score, max: 10 %>
+				<br/>
+				<br/>
+				<%= submit_tag %>
+			<% end %>
+		</div>

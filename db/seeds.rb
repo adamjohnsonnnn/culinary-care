@@ -1,53 +1,5 @@
-# ActiveRecord::Base.logger = Logger.new(STDOUT)
-
-# Food_Items (name, description, chef_id, food_category_id)
-
-# food_items = Food_Item.create([ {name: 'Pork Chop', description: 'Risotto Al Salto, Apple Agrodolce, Crispy Sage', chef_id: Braden Soristo, 
-
-
-# Doug Psatlis - Roasted Shrimp with Tomatoes & Feta
-
-# Michael Spiewak - Shrimp with Roasted Eggplant Yogurt
-
-# Tim Davidson - Mama's Chicken a La King
-
-# Dan Salls - Poc Chuc 
-
-# Zach Walrath - Sweet Corn Risotto with Grilled Shrimp 
-
-# John Manion - Chimicurri Chicken Thighs with Black Beans and Rice
-
-# Devon Quinn - Vadouvan Chicken Curry with Burnt Eggplant-Black Garlic Puree, Cherry Tomato, Corn
-
-# Paul Virant - Stuffed Sweet Pepper Provencal
-
-# Geoff Fellows - Dry Roasted String Beans w/ Rice Noodles and Soy Yogurt
-
-# Todd Stein - Celery Root Bisque with Oyster Mushrooms and Jasmine Rice
-
-# Kevin Cuddihee - Spanish Shrimp
-
-# Seth Blumenthal - Roasted Pork and Fall Pilaf
-
-# Aaron Cuschieri - Korean BBQ Flank Steak Tacos
-
-# Joey Beato - Orecchiette with Spicy Chicken Ragu, broccoli rabe, and goat cheese
-
-# Matt Ayala - Roasted Chicken
-
-# Jimmy Bannos, Sr. - Pan Seared Chicken Thighs with a Grape Tomato & Basil Salad & Balsamic Reduction
-
-# Phillip Foss - Chicken and Shrimp Soup with Rice and Thai Flavors
-
-# Scott Shulman - Roasted Chicken, Wild Mushroom Rice, and Brussel Sprout Salad ])
-
 
 # Votes (creativity_score, presentation_score, category_alignment_score, overall_taste_score, food_item_id, judge_id)
-
-# +++++++++++++++++++++++++++++++++++++++DUKE CODE+++++++++++++++++++++++++++++++++++++++++++
-
-# leon = Chef.create!
-# food = FoodItem.create!(chef: leon) 
 
 # +++++++++++++++++++++++++++++++++++ JUDGES - submitted ++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -66,42 +18,80 @@ alex = Judge.find_or_create_by!(name: 'Alex Shebar', bio: 'Alex was the first-ev
 # ++++++++++++++++++++++++++++++++++++ CHEFS - submitted ++++++++++++++++++++++++++++++++++++++++++++++++++
 
 joey = Chef.find_or_create_by!(name: 'Chef Joey Beato', restaurant: 'Community Tavern')
+joey.company = 'Impact Networking'
+joey.save!
 
-chef_kevin = Chef.find_or_create_by!(name: 'Chef Kevin Cuddihee', restaurant: 'TWO Restaurant') 
+chef_kevin = Chef.find_or_create_by!(name: 'Chef Kevin Cuddihee', restaurant: 'TWO Restaurant')
+chef_kevin.company = 'Edlong Dairy Technologies'
+chef_kevin.save! 
 
 chef_seth = Chef.find_or_create_by!(name: 'Chef Seth Blumenthal', restaurant: 'Alter (Miami)') 
+chef_seth.company = 'IMC'
+chef_seth.save! 
 
 chef_aaron = Chef.find_or_create_by!(name: 'Chef Aaron Cuschieri', restaurant: 'The Dearborn')
+chef_aaron.company = 'Signal'
+chef_aaron.save!
 
 chef_philip = Chef.find_or_create_by!(name: 'Chef Philip Foss', restaurant: 'El Ideas') 
+chef_philip.company = 'Bank of America'
+chef_philip.save!
 
-chef_matt = Chef.find_or_create_by!(name: 'Chef Matt Ayala', restaurant: 'Cochon Volant') 
+chef_matt = Chef.find_or_create_by!(name: 'Chef Matt Ayala', restaurant: 'Cochon Volant')
+chef_matt.company = 'Capital Group'
+chef_matt.save! 
 
 chef_tim = Chef.find_or_create_by!(name: 'Chef Tim Davidson', restaurant: 'Land & Lake Kitchen') 
+chef_tim.company = 'Nuveen'
+chef_tim.save!
 
 chef_dan = Chef.find_or_create_by!(name: 'Chef Dan Salls', restaurant: 'Quiote') 
+chef_dan.company = 'Merit Solutions'
+chef_dan.save!
 
 chef_doug = Chef.find_or_create_by!(name: 'Chef Doug Psaltis', restaurant: 'RPM/RPM Steak, Bub City') 
+chef_doug.company = 'Greentarget'
+chef_doug.save!
 
 chef_braden = Chef.find_or_create_by!(name: 'Chef Braden Soristo', restaurant: 'Acanto') 
+chef_braden.company = "Northwestern University Medicine"
+chef_braden.save!
 
 chef_michael = Chef.find_or_create_by!(name: 'Chef Michael Spiewak', restaurant: 'The Heritage')
+chef_michael.company = 'Much Shelist'
+chef_michael.save!
 
-chef_scott = Chef.find_or_create_by!(name: 'Chef Scott Shulman', restaurant: 'Homestead on the Roof') 
+chef_scott = Chef.find_or_create_by!(name: 'Chef Scott Shulman', restaurant: 'Homestead on the Roof', company: 'Impact Networking') 
+chef_scott.company = 'Impact Networking'
+chef_scott.save!
 
-chef_zach = Chef.find_or_create_by!(name: 'Chef Zach Walrath', restaurant: 'The Florentine') 
+chef_zach = Chef.find_or_create_by!(name: 'Chef Zach Walrath', restaurant: 'The Florentine')
+chef_zach.company = "RustOleum"
+chef_zach.save! 
 
 chef_jimmy = Chef.find_or_create_by!(name: 'Chef Jimmy Bannos Sr.', restaurant: 'The Purple Pig/Heaven on Seven') 
+chef_jimmy.company = 'Everything Erica'
+chef_jimmy.save!
 
 chef_john = Chef.find_or_create_by!(name: 'Chef John Manion', restaurant: 'El Che Bar/La Sirena Clandestina') 
+chef_john.company = 'TastyTrade'
+chef_john.save!
 
-chef_devon = Chef.find_or_create_by!(name: 'Chef Devon Quinn', restaurant: 'Eden') 
+chef_devon = Chef.find_or_create_by!(name: 'Chef Devon Quinn', restaurant: 'Eden')
+chef_devon.company = 'Mars Food'
+chef_devon.save! 
 
 chef_todd = Chef.find_or_create_by!(name: 'Chef Todd Stein', restaurant: 'The Bristol/Formentos') 
+chef_todd.company = 'Jewel Osco'
+chef_todd.save!
 
 chef_paul = Chef.find_or_create_by!(name: 'Chef Paul Virant', restaurant: 'Vie') 
+chef_paul.company = 'Perkins + Will'
+chef_paul.save!
 
 chef_geef = Chef.find_or_create_by!(name: 'Chef Geef Fellows', restaurant: 'Bad Hunter')
+chef_geef.company = 'Barings'
+chef_geef.save!
 
 # +++++++++++++++++++++++++++++++++++++ FOOD_CATEGORY - submitted +++++++++++++++++++++++++++++++++++++++++
 
@@ -113,7 +103,7 @@ low_sodium = FoodCategory.find_or_create_by!(name: 'Low-Sodium', description: 'T
 
 vegetarian = FoodCategory.find_or_create_by!(name: 'Vegetarian', description: 'This dish should focus on fruits, vegetables, plant-based proteins, whole grains, and/or lean proteins.')
 
-# +++++++++++++++++++++++++++++++++++++++ FOOD_ITEM +++++++++++++++++++++++++++++++++++++++++++++++
+# +++++++++++++++++++++++++++++++++++++++ FOOD_ITEM - submitted +++++++++++++++++++++++++++++++++++++++++++++++
 
 
 braden_pork_chop = FoodItem.find_or_create_by!(name: 'Pork Chop', description: 'Risotto Al Salto, Apple Agrodolce, Crispy Sage', chef: chef_braden, food_category: low_fiber)  
@@ -150,9 +140,96 @@ matt_chicken = FoodItem.find_or_create_by!(name: 'Roasted Chicken', description:
 
 jimmy_chicken = FoodItem.find_or_create_by!(name: 'Pan Seared Chicken', description: 'Pan Seared Chicken Thighs with a Grape Tomato & Basil Salad & Balsamic Reduction', chef: chef_jimmy, food_category: low_sodium)
 
-chef_philip = FoodItem.find_or_create_by!(name: 'Chicken and Shrimp Soup', description: 'Chicken and Shrimp Soup with Rice and Thai Flavors', chef: chef_philip, food_category: high_protein)
+philip_chicken = FoodItem.find_or_create_by!(name: 'Chicken and Shrimp Soup', description: 'Chicken and Shrimp Soup with Rice and Thai Flavors', chef: chef_philip, food_category: high_protein)
 
 scott_chicken = FoodItem.find_or_create_by!(name: 'Roasted Chicken', description: 'Roasted Chicken, Wild Mushroom Rice, and Brussel Sprout Salad', chef: chef_scott, food_category: low_sodium)
+
+
+# +++++++++++++++++++++++++++++++++++++++++++ ASSIGNMENTS +++++++++++++++++++++++++++++++++++++++++++++++
+
+assignment_1 = Assignment.find_or_create_by!(judge: ji, food_item: jimmy_chicken)
+
+assignment_2 = Assignment.find_or_create_by!(judge: ji, food_item: aaron_tacos)
+
+assignment_3 = Assignment.find_or_create_by!(judge: ji, food_item: matt_chicken)
+
+assignment_4 = Assignment.find_or_create_by!(judge: ji, food_item: seth_pork)
+
+assignment_5 = Assignment.find_or_create_by!(judge: ji, food_item: joey_ragu)
+
+assignment_6 = Assignment.find_or_create_by!(judge: ji, food_item: tim_chicken)
+
+assignment_7 = Assignment.find_or_create_by!(judge: david, food_item: todd_bisque)
+
+assignment_8 = Assignment.find_or_create_by!(judge: david, food_item: philip_chicken)
+
+assignment_9 = Assignment.find_or_create_by!(judge: david, food_item: paul_pepper)
+
+assignment_10 = Assignment.find_or_create_by!(judge: david, food_item: dan_poc_chuc)
+
+assignment_11 = Assignment.find_or_create_by!(judge: david, food_item: devon_chicken)
+
+assignment_12 = Assignment.find_or_create_by!(judge: david, food_item: kevin_shrimp)
+
+assignment_13 = Assignment.find_or_create_by!(judge: alex, food_item: todd_bisque)
+
+assignment_14 = Assignment.find_or_create_by!(judge: alex, food_item: philip_chicken)
+
+assignment_15 = Assignment.find_or_create_by!(judge: alex, food_item: paul_pepper)
+
+assignment_16 = Assignment.find_or_create_by!(judge: alex, food_item: dan_poc_chuc)
+
+assignment_17 = Assignment.find_or_create_by!(judge: alex, food_item: devon_chicken)
+
+assignment_18 = Assignment.find_or_create_by!(judge: alex, food_item: kevin_shrimp)
+
+assignment_19 = Assignment.find_or_create_by!(judge: seth, food_item: geef_beans)
+
+assignment_20 = Assignment.find_or_create_by!(judge: seth, food_item: scott_chicken)
+
+assignment_21 = Assignment.find_or_create_by!(judge: seth, food_item: michael_shrimp)
+
+assignment_22 = Assignment.find_or_create_by!(judge: seth, food_item: john_chimicurri)
+
+assignment_23 = Assignment.find_or_create_by!(judge: seth, food_item: doug_shrimp)
+
+assignment_24 = Assignment.find_or_create_by!(judge: seth, food_item: braden_pork_chop)
+
+assignment_25 = Assignment.find_or_create_by!(judge: bobby, food_item: jimmy_chicken)
+
+assignment_26 = Assignment.find_or_create_by!(judge: bobby, food_item: aaron_tacos)
+
+assignment_27 = Assignment.find_or_create_by!(judge: bobby, food_item: matt_chicken)
+
+assignment_28 = Assignment.find_or_create_by!(judge: bobby, food_item: seth_pork)
+
+assignment_29 = Assignment.find_or_create_by!(judge: bobby, food_item: joey_ragu)
+
+assignment_30 = Assignment.find_or_create_by!(judge: bobby, food_item: tim_chicken)
+
+assignment_31 = Assignment.find_or_create_by!(judge: bobby, food_item: zach_risotto)
+
+assignment_32 = Assignment.find_or_create_by!(judge: penny, food_item: geef_beans)
+
+assignment_33 = Assignment.find_or_create_by!(judge: penny, food_item: scott_chicken)
+
+assignment_34 = Assignment.find_or_create_by!(judge: penny, food_item: michael_shrimp)
+
+assignment_35 = Assignment.find_or_create_by!(judge: penny, food_item: john_chimicurri)
+
+assignment_36 = Assignment.find_or_create_by!(judge: penny, food_item: doug_shrimp)
+
+assignment_37 = Assignment.find_or_create_by!(judge: penny, food_item: braden_pork_chop)
+
+
+
+
+
+
+
+
+
+
 
 
 
