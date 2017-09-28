@@ -3,7 +3,10 @@ Rails.application.routes.draw do
 
   resources :scores
 
+
   get '/winners', to: 'scores#winners'
   get '/:judge_name', to: 'scores#new'
+
+
 
 end

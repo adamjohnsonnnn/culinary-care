@@ -1,6 +1,7 @@
 class ScoresController < ApplicationController
 
 	def new
+		p 'in the new'
 		@vote = Vote.new
 		@judge = Judge.find_by(name: params[:judge_name])
 	end
@@ -18,7 +19,7 @@ class ScoresController < ApplicationController
 	end
 
 	def winners
-		
+		p 'in winners'
 	end
 
 	
